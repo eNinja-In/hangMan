@@ -1,0 +1,104 @@
+body{
+    background-image: url("resource/background.jfif");
+    background-size:cover;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.notice{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.719);
+}
+.noticeBoard{
+    text-align: center;
+    width: 30%;
+    height:max-content;
+    background-color: white;
+    border-radius: 30px;
+    padding: 2%;
+    transition: 0s;
+}
+.noticeBoard img{width: 10rem;}
+.noticeAnswer{font-size: 120%;}
+:where(.noticeBoard, .containerKeyboard) button{
+    cursor: pointer;
+    color: white;
+    background-color: #006effe2;
+    width: 13%;
+    padding: 2%;
+    font-size: 120%;
+    margin: 0.4%;
+    border-radius: 10px;
+}
+:where(.noticeBoard, .containerKeyboard) button:hover{border-color: white;}
+.playAgain{width:fit-content;}
+.main{
+    background-color: rgba(255, 255, 255, 0.285);   
+    display: flex;
+    padding: 1% 1% 0 1%;
+    margin-top: 10%;
+    width: 70%;
+    border-radius: 30px;
+}
+.hangMan{
+    padding: 3%;
+    margin: 1%;
+    text-align: center;
+    font-size: 150%;
+}
+.hangMan img{width: 80%;}
+.hangMan h2{margin: 10% 0 0 0;}
+.containerGuessList{
+    padding: 0;
+    margin: 0 0 6% 0;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.guessList{
+    color: black;
+    font-size: 200%;
+    border-bottom: 3px solid black;
+    margin: 10% 0 0% 3%;
+    width: 9%;
+    text-align: center;
+}
+.containerScoreBoard{
+    color: rgb(255, 255, 255);
+    margin: 2% 0 0 0 ;
+    list-style: none;
+    height: max-content;
+    font-size: 110%;
+}
+.boardScore{color: rgb(255, 255, 0);font-size: 140%;}
+.containerScoreBoard h{
+    color: rgb(255, 255, 255);
+    font-size: 140%;
+    font-weight: 600;
+    -webkit-text-stroke: 0.1px  rgb(255, 255, 255);
+}
+.containerKeyboard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media(width < 1000px){
+    .noticeBoard{width:70%;}
+    .main{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .containerScoreBoard{color: black;}
+    .containerScoreBoard h{color: black;}
+}
